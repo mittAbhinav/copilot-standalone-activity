@@ -1,6 +1,8 @@
 import requests
 import csv
 import os
+import datetime
+from datetime import datetime, timezone
 
 # Global constants
 ENTERPRISE_SLUG = 'HCL-Software'
@@ -92,7 +94,9 @@ def main():
     else:
 
         # Specify the CSV file name
-        csv_file_name = 'output_data.csv'
+        
+        timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+        csv_file_name = f"teams_{timestamp}.csv"
 
         # Define the fieldnames based on the dictionary keys
         fieldnames = ['enterprise_name', 'team_name', 'user_name', 'copilot_activity', 'last_active_editor', 'status']
@@ -116,7 +120,7 @@ def main():
         #     for row in output_data:
         #         writer.writerow(row)
 
-        print(f"Data written to output.csv successfully.")
+        print(f"Data written to {csv_file_name}")
 
 if __name__ == "__main__":
     main()
