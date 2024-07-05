@@ -1,12 +1,12 @@
 name: Copilot-user-activity
 
 on:
-  push:
-    branches: [ main ]
+  # push:
+  #   branches: [ main ]
   workflow_dispatch:
-  schedule:
-    # Runs at the beginning of every hour
-    - cron: '0 * * * *'
+  # schedule:
+  #   # Runs at the beginning of every hour
+  #   - cron: '0 * * * *'
 
 jobs:
   Copilot-activity:
