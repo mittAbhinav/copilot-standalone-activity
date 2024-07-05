@@ -5,7 +5,7 @@ import datetime
 from datetime import datetime, timezone
 
 # Global constants
-ENTERPRISE_SLUG = 'HCL-Software'
+ENTERPRISE_SLUG = '*******************' # your_enterprise_slug_here
 AUTH_TOKEN = os.environ.get('GH_ADMIN_TOKEN')
 
 # API version header
