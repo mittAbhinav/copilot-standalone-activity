@@ -31,7 +31,7 @@ jobs:
           GH_ADMIN_TOKEN: ${{ secrets.REPORTS_PAT }}
 
     - name: Github Copilot report
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: Copilot_Users${{ steps.date.outputs.date }}
         path: |
