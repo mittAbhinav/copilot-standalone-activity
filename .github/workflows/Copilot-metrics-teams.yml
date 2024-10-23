@@ -1,4 +1,4 @@
-name: Run Copilot Metrics Script
+name: Run Copilot Metrics Teams
 
 on:
   # push:
