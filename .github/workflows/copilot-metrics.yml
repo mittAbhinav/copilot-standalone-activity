@@ -29,9 +29,8 @@ jobs:
       run: |
           python copilot-metrics.py
       env:
-          ENTERPRISE_ID: ${{ secrets.ENTERPRISE_ID }}
           ENTERPRISE_SLUG: ${{ secrets.ENTERPRISE_SLUG }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.REPORTS_PAT }}
 
     - name: Upload Copilot Metrics Report
       uses: actions/upload-artifact@v3
